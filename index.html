@@ -6,40 +6,44 @@
      <!--Import Google Icon Font-->
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha512-U6K1YLIFUWcvuw5ucmMtT9HH4t0uz3M366qrF5y4vnyH6dgDzndlcGvH/Lz5k8NFh80SN95aJ5rqGZEdaQZ7ZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>   
             
     <title>Materialize Lesson Net Ninja</title>
     <style>
-       .col > div {
-           background: lightblue;
-           height: 120px;
-       }
+       
     </style>
 </head>
 <body>
-    <div class="container">
-        <h4>Shadows and Depth</h4>
-      <div class="row">
-          <div class="col s2">
-              <div></div>
-          </div>
-          <div class="col s2">
-              <div class="z-depth-1"></div>
-          </div>
-          <div class="col s2">
-              <div class="z-depth-2"></div>
-          </div>
-          <div class="col s2">
-              <div class="z-depth-3"></div>
-          </div>
-          <div class="col s2">
-              <div class="z-depth-4"></div>
-          </div>
-          <div class="col s2">
-              <div class="z-depth-5"></div>
-          </div>
-      </div>
-    </div>
+   <nav>
+       <div class="nav-wrapper indigo">
+           <div class="container">
+               <a href="#" class="brand-logo center">NetNinja</a>
+               <a href="#" class="sidenav-trigger" data-target="mobile-links"><i class="material-icons">menu</i></a>
+               <ul class="right hide-on-med-and-down">
+                   <li><a href="#">Home</a></li>
+                   <li><a href="#">About</a></li>
+                   <li><a href="#">Contact</a></li>
+                   <li><a href="#" class="btn-floating indigo darken-4 z-depth-0">
+                       <i class="material-icons">notifications</i>
+                   </a></li>
+                   <li><span class="badge white-text pink new"
+                    style="position: relative; top:20px; left:-20px">5</span></li>
+               </ul>
+           </div>
+       </div>
+   </nav>
+   <ul class="sidenav" id="mobile-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+   </ul>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.sidenav').sidenav();
+        })
+    </script>
 </body>
 </html>
